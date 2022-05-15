@@ -5,21 +5,25 @@ import { LngContainer, PurpleText, WhiteText } from '../../styles/text'
 import { Translatebutton } from '../../styles/button'
 import { TranslateImage } from '../../styles/images'
 
-export default function HeaderComponent() {
+export default function HeaderComponent({
+    setLng,
+    lng
+}) {
   return (
     <HeaderBack>
         <WhiteText>Translate App</WhiteText>
         <LngContainer>
             <PurpleText>
-                İngilizce
+               {lng === true ? "İngilizce" : "Türkçe"}
             </PurpleText>
-            <Translatebutton>
+            <Translatebutton onPress = {()=>setLng(!lng)} >
                 <TranslateImage 
+                    resizeMode = "contain"
                     source={require("../../asset/change.png")}
                 />
             </Translatebutton>
             <PurpleText>
-                Türkçe
+                {lng !== true ? "İngilizce" : "Türkçe"}
             </PurpleText>
         </LngContainer>
     </HeaderBack>

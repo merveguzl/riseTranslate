@@ -25,7 +25,11 @@ const LngContainer = styled.View`
 const PurpleText = styled.Text`
     color: ${color.purple};
     font-size:15px;
+    width:40%;
+    text-align:center;
+`;
 
+const GreyText = styled.Text`
 
 `;
 
@@ -33,5 +37,6 @@ const PurpleText = styled.Text`
 export{
     WhiteText,
     LngContainer,
-    PurpleText
+    PurpleText,
+    GreyText
 }

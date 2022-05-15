@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import color from "../UI/color";
-import {Dimensions} from "react-native";
+import { Dimensions } from "react-native";
 
 const White = styled.View`
     background-color: ${color.white};
@@ -9,13 +9,25 @@ const White = styled.View`
 `;
 
 const HeaderBack = styled.View`
-    height: ${Dimensions.get("window").height*10/100}px;
+    height: ${Dimensions.get("window").height * 10 / 100}px;
     background-color: ${color.purple};
     width: 100%;
 `;
 
+const Body = styled.View`
+    width : 100%;
+    padding-horizontal : 5%;
+`;
 
-export{
+const InputBody = styled.View`
+    width : 100%;
+    height: 110px;
+    margin-top : ${props => (props.top !== undefined ? props.top : 100)}px;
+`;
+
+export {
     White,
-    HeaderBack
+    HeaderBack,
+    Body,
+    InputBody
 }
