@@ -25,9 +25,24 @@ const InputBody = styled.View`
     margin-top : ${props => (props.top !== undefined ? props.top : 100)}px;
 `;
 
+const Absolute = styled.View`
+    position: absolute;
+    height:50px;
+    width:50px;
+    bottom:-50px;
+    right:10px;
+    background-color:${color.white};
+    border-radius:50px;
+    padding:5px;
+    align-items:center;
+    border-width:1px;
+    border-color:${color.purple}
+`;
+
 export {
     White,
     HeaderBack,
     Body,
-    InputBody
+    InputBody,
+    Absolute
 }

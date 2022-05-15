@@ -1,4 +1,3 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import { HeaderBack } from '../../styles/background'
 import { LngContainer, PurpleText, WhiteText } from '../../styles/text'
@@ -14,7 +13,7 @@ export default function HeaderComponent({
         <WhiteText>Translate App</WhiteText>
         <LngContainer>
             <PurpleText>
-               {lng === true ? "İngilizce" : "Türkçe"}
+               {lng === true ? "English" : "Spanish"}
             </PurpleText>
             <Translatebutton onPress = {()=>setLng(!lng)} >
                 <TranslateImage 
@@ -23,7 +22,7 @@ export default function HeaderComponent({
                 />
             </Translatebutton>
             <PurpleText>
-                {lng !== true ? "İngilizce" : "Türkçe"}
+                {lng !== true ? "English" : "Spanish"}
             </PurpleText>
         </LngContainer>
     </HeaderBack>

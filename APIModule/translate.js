@@ -8,21 +8,17 @@ function headersF() {
 }
 
 //Response-Type :restful
-exports.translate = function (text, lng1, lng2) {
+exports.translate = function (text, lng) {
 
-
-    let data = {
-        q: "selam",
-        source: lng1,
-        target: lng2,
-        format: "text",
-        api_key: "xxxxxxxx - xxxx - xxxx - xxxx - xxxxxxxxxxxx"
-    }
+    let data = JSON.stringify({
+        q: text,
+        source: lng === true ? "en" : "es",
+        target: lng === true ? "es" : "en"
+    })
 
 
     return new Promise((resolve) => {
-        axios
-            .post(`${API_URL}`, data, { headers: headersF() })
+        axios.post(`https://translate.argosopentech.com/translate`, data, { headers: headersF() })
             .then(function (params) {
                 console.log("params 2", params)
                 resolve(params.data);

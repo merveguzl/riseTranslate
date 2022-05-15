@@ -19,7 +19,8 @@ export default function Input({
       <TextInput
         editable={control !== true ? true : false}
         value={value}
-        placeholder={control !== true ? "Çevirmek istediğiniz kelimeyi yazınız..." : ""}
+        onChangeText={(text)=>setValue(text)}
+        placeholder={control !== true ? "Type the word you want to translate..." : ""}
         placeholderTextColor={color.grey}
         multiline={true}
       />

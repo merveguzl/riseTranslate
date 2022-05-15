@@ -1,28 +1,39 @@
 import React from 'react'
 import Input from '../../components/Input'
-import { Body } from '../../styles/background'
+import { Absolute, Body } from '../../styles/background'
+import { Translatebutton } from '../../styles/button'
+import { TranslateImage } from '../../styles/images'
 
 export default function InputsContainer({
-  lng, 
+  lng,
   changeText,
   setChangeText,
   responseText,
-  setResponseText
+  setResponseText,
+  onChange
 }) {
   return (
     <Body>
-      <Input 
+      <Input
         value={changeText}
         setValue={setChangeText}
-        text={lng === true ? "İngilizce" : "Türkçe"}
+        text={lng === true ? "English" : "Spanish"}
       />
-      <Input 
+      <Input
         top={20}
-        text={lng !== true ? "İngilizce" : "Türkçe"}
-        control = {true}
+        text={lng !== true ? "English" : "Spanish"}
+        control={true}
         value={responseText}
         setValue={setResponseText}
       />
+      <Absolute>
+        <Translatebutton onPress={() => onChange()} >
+          <TranslateImage
+            resizeMode="contain"
+            source={require("../../asset/change.png")}
+          />
+        </Translatebutton>
+      </Absolute>
     </Body>
   )
 }
