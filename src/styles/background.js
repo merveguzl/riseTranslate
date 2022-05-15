@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components/native'
 import color from "../UI/color";
 import { Dimensions } from "react-native";
 

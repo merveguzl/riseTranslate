@@ -30,7 +30,7 @@ export default function InputsContainer({
         value={responseText}
         setValue={setResponseText}
       />
-      <Absolute>
+      <Absolute testID="changeButton" >
         <Translatebutton onPress={() => onChange()} >
           <TranslateImage
             resizeMode="contain"

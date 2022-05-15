@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { White } from '../styles/background'
-import HeaderContainer from "../pages/Container.js/HeaderContainer";
-import InputsContainer from "../pages/Container.js/InputsContainer";
+import HeaderContainer from "../pages/Container/HeaderContainer";
+import InputComponent from "../pages/Component/InputComponent";
 import { translate } from '../../APIModule/translate';
 import Voice from '@react-native-voice/voice';
 
@@ -80,7 +80,7 @@ export default function DefaultContainer() {
   return (
     <White>
       <HeaderContainer lng={lng} setLng={setLng} />
-      <InputsContainer
+      <InputComponent
         listening={listening}
         lng={lng}
         changeText={changeText}

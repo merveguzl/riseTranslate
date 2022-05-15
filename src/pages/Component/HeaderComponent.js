@@ -15,7 +15,7 @@ export default function HeaderComponent({
             <PurpleText>
                {lng === true ? "English" : "Spanish"}
             </PurpleText>
-            <Translatebutton onPress = {()=>setLng(!lng)} >
+            <Translatebutton onPress = {setLng} testID="changeLNGButton" >
                 <TranslateImage 
                     resizeMode = "contain"
                     source={require("../../asset/change.png")}
