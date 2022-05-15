@@ -27,10 +27,24 @@ const InputBody = styled.View`
 
 const Absolute = styled.View`
     position: absolute;
-    height:50px;
-    width:50px;
-    bottom:-50px;
+    height:80px;
+    width:80px;
+    bottom:-70px;
     right:10px;
+    background-color:${color.white};
+    border-radius:50px;
+    padding:5px;
+    align-items:center;
+    border-width:1px;
+    border-color:${color.purple}
+`;
+
+const Voice = styled.View`
+    position: absolute;
+    height:40px;
+    width:40px;
+    bottom:-20px;
+    right:-5px;
     background-color:${color.white};
     border-radius:50px;
     padding:5px;
@@ -44,5 +58,6 @@ export {
     HeaderBack,
     Body,
     InputBody,
-    Absolute
+    Absolute,
+    Voice
 }

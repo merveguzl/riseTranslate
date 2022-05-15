@@ -10,7 +10,9 @@ export default function InputsContainer({
   setChangeText,
   responseText,
   setResponseText,
-  onChange
+  onChange,
+  onSpeaker,
+  listening
 }) {
   return (
     <Body>
@@ -18,6 +20,8 @@ export default function InputsContainer({
         value={changeText}
         setValue={setChangeText}
         text={lng === true ? "English" : "Spanish"}
+        onSpeaker={onSpeaker}
+        listening={listening}
       />
       <Input
         top={20}
